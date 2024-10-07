@@ -17,7 +17,7 @@ export class UsersController {
         private authService: AuthService, 
         ) {}
 
-    @Get('/whoami')
+    @Get('/whoLoggedin')
     @UseGuards(AuthGuard)
     whoAmI(@CurrentUser() user: User){
         return user;
